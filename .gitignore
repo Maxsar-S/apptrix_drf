@@ -141,3 +141,5 @@ GitHub.sublime-settings
 
 # Media
 /media/
+
+.env
