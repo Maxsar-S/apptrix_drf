@@ -14,4 +14,4 @@ class User(AbstractUser):
 
     email = models.EmailField(unique=True)
     gender = models.CharField(choices=GENDER_CHOISES, max_length=1, verbose_name='gender')
-    user_image = models.ImageField(upload_to='users_images', blank=True)
+    user_image = models.ImageField(upload_to='users_images')
