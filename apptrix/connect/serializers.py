@@ -21,6 +21,8 @@ class UserRegistrySerializer(serializers.ModelSerializer):
             last_name=self.validated_data['last_name'],
             user_image=self.validated_data['user_image'],
             gender=self.validated_data['gender'],
+            width=self.validated_data['width'],
+            longitude=self.validated_data['longitude'],
         )
         password = self.validated_data['password']
         try:
