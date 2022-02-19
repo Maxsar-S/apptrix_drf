@@ -16,7 +16,7 @@ class UserFilter(filters.FilterSet):
     gender = filters.ChoiceFilter(choices=GENDER_CHOISES)
     first_name = filters.CharFilter(lookup_expr='contains')
     last_name = filters.CharFilter(lookup_expr='contains')
-    distance = filters.NumberFilter(method='filter_by_distance')
+    distance = filters.NumberFilter(method='filter_by_distance', label='Distance from you')
 
     class Meta:
         model = User

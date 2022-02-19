@@ -3,7 +3,6 @@ from django.contrib.auth.validators import UnicodeUsernameValidator
 from django.db import models
 
 
-
 class User(AbstractUser):
     MALE = 'M'
     FEMALE = 'W'
