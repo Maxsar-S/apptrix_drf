@@ -1,8 +1,10 @@
 import environ
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics, status
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 
+from connect.filters import UserFilter
 from connect.serializers import UserRegistrySerializer, UserSerializer, UserMatchSerializer
 from connect.models import User
 import smtplib
@@ -48,6 +50,15 @@ class UserMatch(generics.RetrieveUpdateAPIView):
         else:
             data = serializer.errors
             return Response(data)
+
+
+class UserList(generics.ListAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [AllowAny]
+
+    filter_backends = [DjangoFilterBackend]
+    filterset_class = UserFilter
 
 
 def send_letter(email1, email2, message1, message2):
