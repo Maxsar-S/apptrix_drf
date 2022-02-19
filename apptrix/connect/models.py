@@ -3,6 +3,7 @@ from django.contrib.auth.validators import UnicodeUsernameValidator
 from django.db import models
 
 
+
 class User(AbstractUser):
     MALE = 'M'
     FEMALE = 'W'
@@ -15,6 +16,9 @@ class User(AbstractUser):
     email = models.EmailField(unique=True)
     gender = models.CharField(choices=GENDER_CHOISES, max_length=1, verbose_name='gender')
     user_image = models.ImageField(upload_to='users_images')
+
+    width = models.FloatField(default=55.75583)
+    longitude = models.FloatField(default=37.6173)
 
 
 class Match(models.Model):

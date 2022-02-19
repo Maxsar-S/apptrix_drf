@@ -10,7 +10,8 @@ from PIL import Image, ImageEnhance
 class UserRegistrySerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['email', 'username', 'password', 'first_name', 'last_name', 'user_image', 'gender']
+        fields = ['email', 'username', 'password', 'first_name', 'last_name',
+                  'user_image', 'gender', 'width', 'longitude']
 
     def save(self, *args, **kwargs):
         user = User(
@@ -42,7 +43,7 @@ class UserRegistrySerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['username', 'first_name', 'last_name', 'gender', 'user_image']
+        fields = ['username', 'first_name', 'last_name', 'gender', 'user_image', 'width', 'longitude']
 
 
 class UserMatchSerializer(serializers.ModelSerializer):
