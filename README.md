@@ -1,8 +1,8 @@
-Backend написанный на Django Rest Framework для сайта знакомств.
-В проекте реализовано:
-1) Модель пользователя
-2) Эндпоинт регистрации
-3) Наложение водяного знака на аватарку при регистрации
-4) Эндопоинт "лайка" другого пользователя, при свзаимности лайков на электронные почты пользователей приходит письмо с контактами другого пользователя
-5) Создан эндпоинт списка участников с фильтрацией
-6) Реализовано определение расстояния между участниками и фильтрация списка пользователей по расстоянию между ними
+Backend written in Django Rest Framework for a dating site.
+The project implements:
+1) User model
+2) Registration endpoint
+3) Add watermark on avatar during registration
+4) The endpoint of "liking" another user, when the liking is mutual, an e-mail with the contacts of another user is sent to the user's e-mail
+5) Created endpoint of the list of participants with filtering
+6) Implemented definition of the distance between members and filtering of the list of users by the distance between them
